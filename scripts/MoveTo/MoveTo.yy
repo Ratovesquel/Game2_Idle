@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"MoveTo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MoveTo",
+  "parent":{
+    "name":"Script",
+    "path":"folders/Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

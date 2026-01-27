@@ -1,0 +1,21 @@
+Beguin
+- make the move script works
+- make camera zoom and drag
+- make the camera focus on a worker/area
+- make GUI and HUD
+- make the buttons
+- make 3 work areas
+- make the upgrade system
+- make a hud for area and worker
+- make the mission system
+- make level 2
+
+Middle
+- make a background
+- make some animations
+- make be possible so customize the workers
+- make the colision
+- make walls
+- make the time to sell
+- make them crete a line 
+- light system
