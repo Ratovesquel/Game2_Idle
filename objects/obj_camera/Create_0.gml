@@ -7,20 +7,9 @@ xTo = x;
 yTo = y;
 
 
-dragging = false;
-
-drag_start_x = 0;
-drag_start_y = 0;
-
-cam_start_x = 0;
-cam_start_y = 0;
-
-
-
-
 // posição lógica da câmera
-camX = x;
-camY = y;
+camX = 0;
+camY = 0;
 
 // tamanho base da view
 baseW = camWight;
@@ -35,6 +24,13 @@ zoomMax = 2;
 zoomStep = 0.15;
 zoomLerp = 0.15;
 
-// suavidade da câmera
+// follow
+follow = noone;
 followLerp = 0.08;
 
+// drag
+dragging = false;
+drag_start_x = 0;
+drag_start_y = 0;
+cam_start_x = 0;
+cam_start_y = 0;

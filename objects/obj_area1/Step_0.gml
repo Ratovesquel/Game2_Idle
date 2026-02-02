@@ -1,6 +1,6 @@
 if(production <= 0){
 	production = productionMax;
-	var newMaterial = instance_create_layer(x+random_range(-150, 150), y+random_range(-150, 150), "Material", obj_area1Material);
+	var newMaterial = instance_create_layer(x, y, "Material", obj_area1Material);
 	var axl = false;
 	while(!axl){
 		var chosen = ds_list_find_value(myWorkers, irandom(ds_list_size(myWorkers)-1));
@@ -8,7 +8,7 @@ if(production <= 0){
 		if(chosen.worker1State == WorkerState.WORKING){
 			axl = true;
 			chosen.target = newMaterial;
-			chosen.worker1State = WorkerState.MATERIAL;
+			chosen.worker1State = WorkerState.RAW_MATERIAL;
 		}
 	}	
 }

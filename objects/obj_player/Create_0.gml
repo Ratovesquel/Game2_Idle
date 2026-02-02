@@ -1,1 +1,1 @@
-global.Money = 0;
+global.Money = 100;

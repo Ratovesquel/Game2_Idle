@@ -1,16 +1,20 @@
 Beguin
-- make the move script works
-- make camera zoom and drag
-- make the camera focus on a worker/area
+- make the move script works							|
+- make camera zoom and drag								|
+- make the camera focus on a worker/area				|
 - make GUI and HUD
+- mak the area1 shake on hit
+- make particle system on selling
 - make the buttons
 - make 3 work areas
 - make the upgrade system
 - make a hud for area and worker
 - make the mission system
 - make level 2
+- make be possible to move everything
 
 Middle
+- make a area that you can choose what to produce
 - make a background
 - make some animations
 - make be possible so customize the workers
@@ -19,3 +23,7 @@ Middle
 - make the time to sell
 - make them crete a line 
 - light system
+
+End
+- make a save system
+- let the game keep happaning when closed
