@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Area2",
-    "path":"folders/Sprites/Area2.yy",
+    "path":"folders/Sprites/Areas/Area2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

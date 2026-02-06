@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Area1",
-    "path":"folders/Objects/Area1.yy",
+    "path":"folders/Objects/Areas/Area1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

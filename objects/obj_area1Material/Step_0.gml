@@ -14,8 +14,12 @@ if(selled){
 #endregion
 
 if(production <= 0){
-	var newMaterial = instance_create_layer(x, y, "Material", obj_area2Material);
-	follow.target = newMaterial;
+	var newMaterial = instance_create_layer(obj_area2.x+obj_area2.createdAreaXY[0], obj_area2.y+obj_area2.createdAreaXY[1], "Material", obj_area2Material);
+	newMaterial.follow = follow;
+	with(follow){
+		target = newMaterial;
+		worker2State = WorkerState.PRODUCED_MATERIAL;
+	}
 	
 	instance_destroy();
 }

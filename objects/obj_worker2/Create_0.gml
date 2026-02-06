@@ -1,4 +1,4 @@
-worker1State = WorkerState.COMMING;
+worker2State = WorkerState.COMMING;
 
 target = noone;
 

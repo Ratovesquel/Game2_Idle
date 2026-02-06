@@ -1,9 +1,9 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_area1",
-  "bboxMode":0,
-  "bbox_bottom":164,
-  "bbox_left":53,
+  "bboxMode":2,
+  "bbox_bottom":136,
+  "bbox_left":54,
   "bbox_right":148,
   "bbox_top":42,
   "collisionKind":1,
@@ -27,7 +27,7 @@
   "origin":9,
   "parent":{
     "name":"Area1",
-    "path":"folders/Sprites/Area1.yy",
+    "path":"folders/Sprites/Areas/Area1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,13 +1,11 @@
 enum WorkerState{
 	COMMING,
-	RAW_MATERIAL,
-	PRODUCED_MATERIAL,
 	NEXT_AREA,
+	PRODUCED_MATERIAL,
+	RAW_MATERIAL,
 	SELLING,
 	WAITING,
 	WORKING
 }
 
-
-//global.wAreas = ds_list_create();
 

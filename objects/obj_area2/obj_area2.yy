@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Area2",
-    "path":"folders/Objects/Area2.yy",
+    "path":"folders/Objects/Areas/Area2.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,9 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"nWorker","filters":[],"listItems":[],"multiselect":false,"name":"nWorker","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"nSpot","filters":[],"listItems":[],"multiselect":false,"name":"nSpot","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"delivered","filters":[],"listItems":[],"multiselect":false,"name":"delivered","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"deliveredMax","filters":[],"listItems":[],"multiselect":false,"name":"deliveredMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"deliveredMax","filters":[],"listItems":[],"multiselect":false,"name":"deliveredMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"30","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

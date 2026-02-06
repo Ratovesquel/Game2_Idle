@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Area1",
-    "path":"folders/Objects/Area1.yy",
+    "path":"folders/Objects/Areas/Area1.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v2","%Name":"productionMax","filters":[],"listItems":[],"multiselect":false,"name":"productionMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"flash","filters":[],"listItems":[],"multiselect":false,"name":"flash","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"nWorker","filters":[],"listItems":[],"multiselect":false,"name":"nWorker","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"nSpot","filters":[],"listItems":[],"multiselect":false,"name":"nSpot","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

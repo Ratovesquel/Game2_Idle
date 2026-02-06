@@ -1,9 +1,9 @@
 Beguin
 - make the move script works							|
 - make camera zoom and drag								|
-- make the camera focus on a worker/area				|
+- make the camera focus on a worker/area				
 - make GUI and HUD
-- mak the area1 shake on hit
+- make the area1 animation
 - make particle system on selling
 - make the buttons
 - make 3 work areas
