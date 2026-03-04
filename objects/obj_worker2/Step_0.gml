@@ -2,7 +2,7 @@
 #region STATE MACHINE
 switch (worker2State){
 	
-	#region BACK TO WORK, SLAVE >:)
+	#region COMMING BACK, SLAVE >:)
 	case WorkerState.COMMING:
 	
 		if(MoveTo(areaX, areaY, spd)){
@@ -23,13 +23,13 @@ switch (worker2State){
 	
 	#region NEXT AREA
 	case WorkerState.NEXT_AREA:
-	//	if(MoveTo(obj_area2.x+obj_area2.deliveredAreaXY[0], obj_area2.y+obj_area2.deliveredAreaXY[1], spd)){
-	//		MoveTo(x, y, 0);
-	//		target.follow = noone;
-	//		target.grabed = false;
-	//		target = noone;
-	//		worker2State = WorkerState.COMMING;
-	//	}
+		if(MoveTo(obj_area3.x+obj_area3.deliveredAreaXY[0], obj_area3.y+obj_area3.deliveredAreaXY[1], spd)){
+			MoveTo(x, y, 0);
+			instance_destroy(target);
+			target = noone;
+			obj_area3.delivered++;
+			worker2State = WorkerState.COMMING;
+		}
 		break;
 	#endregion
 	
@@ -42,7 +42,6 @@ switch (worker2State){
 			if(instance_exists(obj_area3)){
 				if(obj_area3.delivered < obj_area3.deliveredMax){
 				worker2State = WorkerState.NEXT_AREA;
-				obj_area2.delivered++;
 				}			
 				else worker2State = WorkerState.SELLING;
 			}
@@ -59,7 +58,6 @@ switch (worker2State){
 			target.grabed = true;
 			MoveTo(target.x, target.y, 0);
 			worker2State = WorkerState.COMMING;
-
 		}
 		break;
 	#endregion	
@@ -96,7 +94,6 @@ switch (worker2State){
 		else{
 			wSpd = wSpdMax;
 			target.production -= wStr;
-			
 		}
 		break;
 	#endregion

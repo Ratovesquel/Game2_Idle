@@ -2,7 +2,7 @@
 #region STATE MACHINE
 switch (worker1State){
 	
-	#region BACK TO WORK, SLAVE >:)
+	#region COMMING BACK, SLAVE >:)
 	case WorkerState.COMMING:
 		if(MoveTo(areaX, areaY, spd)){
 			MoveTo(areaX, areaY, 0);
@@ -25,7 +25,7 @@ switch (worker1State){
 		break;
 	#endregion
 	
-	#region GET MATERIAL
+	#region GET PRODUCED MATERIAL
 	case WorkerState.RAW_MATERIAL:
 		if(MoveTo(target.x, target.y, spd)){
 			target.follow = self;

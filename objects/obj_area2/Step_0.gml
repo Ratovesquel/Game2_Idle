@@ -1,4 +1,6 @@
+//show_debug_message("Max = " + string(delivered));
 
+#region CREATION
 
 var keyS = keyboard_check_released(ord("S"));
 if(keyS){
@@ -19,14 +21,11 @@ if(keyS){
 				break;
 		}
 		
-		
 		ds_list_add(mySpots, spot);
 		nSpot = ds_list_size(mySpots);
 		
 	}
 }
-
-
 
 
 var keyX = keyboard_check_released(ord("X"));
@@ -35,7 +34,7 @@ if(keyX){
 	if(nWorker < nSpot){
 		if((global.Money - 50) < 0)show_message("NUH UH, U R POOR");
 		else{
-			//global.Money -= 50;
+			global.Money -= 50;
 			var positions = personalArea[| nWorker];
 			var worker = instance_create_layer(obj_spawner.x, obj_spawner.y, "Instances", obj_worker2);
 			worker.areaX = x+positions[0];
@@ -50,7 +49,5 @@ if(keyX){
 	}
 }
 
-//var keyM = keyboard_check_released(ord("M"));
-//if(keyM)obj_worker2.spd++;
-
+#endregion
 

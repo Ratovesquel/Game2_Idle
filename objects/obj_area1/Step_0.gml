@@ -18,7 +18,7 @@ if(production <= 0){
 #endregion
 
 
-
+#region CREATION
 
 var keyA = keyboard_check_released(ord("A"));
 if(keyA){
@@ -30,8 +30,6 @@ if(keyA){
 		if(nSpot%2==0) spot.image_xscale = -1;
 	}
 }
-
-
 
 
 var keyZ = keyboard_check_released(ord("Z"));
@@ -56,10 +54,10 @@ if(keyZ){
 	}
 }
 
-
 var keyM = keyboard_check_released(ord("M"));
 if(keyM)obj_worker1.spd++;
 
+#endregion
 
 
 #region CLICK AREA
