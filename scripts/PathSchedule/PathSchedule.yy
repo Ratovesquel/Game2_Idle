@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PathSchedule",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PathSchedule",
+  "parent":{
+    "name":"Script",
+    "path":"folders/Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -4,59 +4,45 @@ switch (worker3State){
 	
 	#region COMMING BACK, SLAVE >:)
 	case WorkerState.COMMING:
-		if(MoveTo(areaX, areaY, spd)){
-			MoveTo(areaX, areaY, 0);
-			worker3State = WorkerState.WAITING;
-		} 
-		break;
-	#endregion
 	
-	#region NEXT AREA
-	case WorkerState.NEXT_AREA:
-		//if(MoveTo(obj_area2.x+obj_area2.deliveredAreaXY[0], obj_area2.y+obj_area2.deliveredAreaXY[1], spd)){
-		//	MoveTo(x, y, 0);
-		//	ds_list_add(obj_area2.deliveredMaterials, target);
-		//	target.follow = noone;
-		//	target.grabed = false;
-		//	target = noone;
-		//	worker3State = WorkerState.COMMING;
-		//}
+		if(PathSchedule(areaX, areaY)){
+			StopPath();
+			
+			worker3State = WorkerState.WAITING;
+		}
+		 
 		break;
 	#endregion
 	
 	#region GET PRODUCED MATERIAL
 	case WorkerState.PRODUCED_MATERIAL:
-		if(MoveTo(target.x, target.y, spd)){
-			MoveTo(target.x, target.y, 0);
+	
+		if(PathSchedule(target.x, target.y)){
+			StopPath();
+			
 			target.grabed = true;
 			target.follow = self;
 			worker3State = WorkerState.SELLING;
-			//if(instance_exists(obj_area3)){
-			//	if(obj_area3.delivered < obj_area3.deliveredMax){
-			//	worker2State = WorkerState.NEXT_AREA;
-			//	obj_area3.delivered++;
-			//	}			
-			//	else worker2State = WorkerState.SELLING;
-			//}
-			//else worker2State = WorkerState.SELLING;
 		}
+
 		break;
 	#endregion
 	
 	#region SELLING
 	case WorkerState.SELLING:
-		if(MoveTo(obj_markert.x, obj_markert.y, spd)){
+	
+		if(PathSchedule(obj_markert.x, obj_markert.y)){
+			StopPath();
+			
 			target.selled = true;
-			MoveTo(obj_markert.x, obj_markert.y, 0);
 			worker3State = WorkerState.COMMING;
-		} 
+		}
 		
 		break;
 	#endregion
 	
 	#region WAITING
 	case WorkerState.WAITING:
-		
 		if(obj_area3.hasWork) worker3State = WorkerState.WORKING;
 		break;
 	#endregion
@@ -93,8 +79,7 @@ image_angle =  sin(walk_anim) * 5;
 
 }
 #endregion
-		
-		
+				
 		
 #region CLICK AREA
 var click = device_mouse_check_button_pressed(0, mb_left);

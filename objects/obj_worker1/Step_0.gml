@@ -3,59 +3,67 @@
 switch (worker1State){
 	
 	#region COMMING BACK, SLAVE >:)
-	case WorkerState.COMMING:
-		if(MoveTo(areaX, areaY, spd)){
-			MoveTo(areaX, areaY, 0);
+	case WorkerState.COMMING:		
+	
+		if(PathSchedule(areaX, areaY)){
+			StopPath();
 			
-			worker1State = WorkerState.WORKING;
-		} 
+	        worker1State = WorkerState.WORKING;
+		}
+		
 		break;
 	#endregion
 	
 	#region NEXT AREA
 	case WorkerState.NEXT_AREA:
-		if(MoveTo(obj_area2.x+obj_area2.deliveredAreaXY[0], obj_area2.y+obj_area2.deliveredAreaXY[1], spd)){
-			MoveTo(x, y, 0);
+
+	    if(PathSchedule(obj_area2.deliverAreaX, obj_area2.deliverAreaY)){
+			StopPath();
+			
 			ds_list_add(obj_area2.deliveredMaterials, target);
 			target.follow = noone;
 			target.grabed = false;
 			target = noone;
 			worker1State = WorkerState.COMMING;
-		}
+	    }
+		
 		break;
 	#endregion
 	
 	#region GET PRODUCED MATERIAL
 	case WorkerState.RAW_MATERIAL:
-		if(MoveTo(target.x, target.y, spd)){
-			target.follow = self;
+
+	    if(PathSchedule(target.x, target.y)){
+			StopPath();
+			
+	        target.follow = self;
 			target.grabed = true;
-			MoveTo(target.x, target.y, 0);
-			if(instance_exists(obj_area2)){
-				if(obj_area2.delivered < obj_area2.deliveredMax && obj_area2.nWorker > 0){
+			if(instance_exists(obj_area2) && obj_area2.delivered < obj_area2.deliveredMax && obj_area2.nWorker > 0){
 				worker1State = WorkerState.NEXT_AREA;
 				obj_area2.delivered++;
-				}			
-				else worker1State = WorkerState.SELLING;
 			}
 			else worker1State = WorkerState.SELLING;
-		}
+	    }
+	
 		break;
 	#endregion		
 	
 	#region SELLING
 	case WorkerState.SELLING:
-		if(MoveTo(obj_markert.x, obj_markert.y, spd)){
+	
+		if(PathSchedule(obj_markert.x, obj_markert.y)){
+			StopPath();
+			
 			target.selled = true;
-			MoveTo(obj_markert.x, obj_markert.y, 0);
 			worker1State = WorkerState.COMMING;
-		} 
-		
+		}
+
 		break;
 	#endregion
 	
 	#region WORKING
 	case WorkerState.WORKING:
+		
 		if(wSpd > 0) wSpd--;
 		else{
 			wSpd = wSpdMax;
@@ -64,12 +72,14 @@ switch (worker1State){
 				production -= other.wStr;
 			}
 		}
+		
 		break;
 	#endregion
 		
 }
 
 #endregion
+
 	
 #region ANIMATION
 if(target != noone && target.grabed){
@@ -83,8 +93,7 @@ image_angle =  sin(walk_anim) * 5;
 }
 #endregion
 		
-		
-		
+	
 #region CLICK AREA
 var click = device_mouse_check_button_pressed(0, mb_left);
 if(mouse_x >= bbox_left && mouse_x <= bbox_right && mouse_y >= bbox_top && mouse_y <= bbox_bottom){

@@ -2,7 +2,7 @@
 
 #region PRODUCTION
 if(production <= 0){
-	production = productionMax;
+	production += productionMax;   // CHANGED
 	var newMaterial = instance_create_layer(x, y, "Material", obj_area1Material);
 	var axl = false;
 	while(!axl){

@@ -9,8 +9,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"General",
-    "path":"folders/Objects/General.yy",
+    "name":"NoSprite",
+    "path":"folders/Objects/General/NoSprite.yy",
   },
   "parentObjectId":null,
   "persistent":false,

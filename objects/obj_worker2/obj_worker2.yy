@@ -34,6 +34,7 @@
     {"$GMObjectProperty":"v2","%Name":"wSpd","filters":[],"listItems":[],"multiselect":false,"name":"wSpd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"wSpdMax","filters":[],"listItems":[],"multiselect":false,"name":"wSpdMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"120","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"wStr","filters":[],"listItems":[],"multiselect":false,"name":"wStr","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"49","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"pathActive","filters":[],"listItems":[],"multiselect":false,"name":"pathActive","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

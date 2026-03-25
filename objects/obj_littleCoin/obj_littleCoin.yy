@@ -10,8 +10,8 @@
   "name":"obj_littleCoin",
   "overriddenProperties":[],
   "parent":{
-    "name":"General",
-    "path":"folders/Objects/General.yy",
+    "name":"WithSprite",
+    "path":"folders/Objects/General/WithSprite.yy",
   },
   "parentObjectId":null,
   "persistent":false,

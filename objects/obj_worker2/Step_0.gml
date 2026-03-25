@@ -5,70 +5,74 @@ switch (worker2State){
 	#region COMMING BACK, SLAVE >:)
 	case WorkerState.COMMING:
 	
-		if(MoveTo(areaX, areaY, spd)){
-			MoveTo(areaX, areaY, 0);
-			
+		if(PathSchedule(areaX, areaY)){
+			StopPath();
+		
 			if(target != noone && target.follow != noone){
 				target.grabed = false;
-				// add some position to the material that depends of w2 position
 				worker2State = WorkerState.WORKING;
-			} 
-			else{
-				worker2State = WorkerState.WAITING;
-			}			
-		} 
+			}
+			else worker2State = WorkerState.WAITING;
+				
+		}
 		
 		break;
 	#endregion
 	
 	#region NEXT AREA
 	case WorkerState.NEXT_AREA:
-		if(MoveTo(obj_area3.x+obj_area3.deliveredAreaXY[0], obj_area3.y+obj_area3.deliveredAreaXY[1], spd)){
-			MoveTo(x, y, 0);
+	
+		if(PathSchedule(obj_area3.deliverAreaX, obj_area3.deliverAreaY)){
+			StopPath();
+			
 			instance_destroy(target);
 			target = noone;
 			obj_area3.delivered++;
 			worker2State = WorkerState.COMMING;
 		}
+
 		break;
 	#endregion
 	
 	#region GET PRODUCED MATERIAL
 	case WorkerState.PRODUCED_MATERIAL:
-		if(MoveTo(target.x, target.y, spd)){
-			MoveTo(target.x, target.y, 0);
-			target.grabed = true;			
+	
+		if(PathSchedule(target.x, target.y)){
+			StopPath();
 			
-			if(instance_exists(obj_area3)){
-				if(obj_area3.delivered < obj_area3.deliveredMax){
+			target.grabed = true;			
+			if(instance_exists(obj_area3) && obj_area3.delivered < obj_area3.deliveredMax && obj_area3.nWorker > 0){
 				worker2State = WorkerState.NEXT_AREA;
-				}			
-				else worker2State = WorkerState.SELLING;
 			}
 			else worker2State = WorkerState.SELLING;
 		}
+	
 		break;
 	#endregion
 	
 	#region GET NEW MATERIAL
 	case WorkerState.RAW_MATERIAL:
 	
-		if(MoveTo(target.x, target.y, spd)){
+		if(PathSchedule(target.x, target.y)){
+			StopPath();
+			
 			target.follow = self;
 			target.grabed = true;
-			MoveTo(target.x, target.y, 0);
 			worker2State = WorkerState.COMMING;
 		}
+
 		break;
 	#endregion	
 	
 	#region SELLING
 	case WorkerState.SELLING:
-		if(MoveTo(obj_markert.x, obj_markert.y, spd)){
-			MoveTo(obj_markert.x, obj_markert.y, 0);
+	
+		if(PathSchedule(obj_markert.x, obj_markert.y)){
+			StopPath();
+			
 			target.selled = true;
 			worker2State = WorkerState.COMMING;
-		} 
+		}
 		
 		break;
 	#endregion
@@ -113,6 +117,7 @@ image_angle =  sin(walk_anim) * 5;
 
 }
 #endregion
+	
 	
 #region CLICK AREA
 var click = device_mouse_check_button_pressed(0, mb_left);

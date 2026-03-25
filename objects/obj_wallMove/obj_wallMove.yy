@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
+  "%Name":"obj_wallMove",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_wallMove",
   "overriddenProperties":[],
   "parent":{
-    "name":"NoSprite",
-    "path":"folders/Objects/General/NoSprite.yy",
+    "name":"WithSprite",
+    "path":"folders/Objects/General/WithSprite.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_blocker",
+    "path":"objects/obj_blocker/obj_blocker.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,9 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_camera",
-    "path":"sprites/spr_camera/spr_camera.yy",
+    "name":"spr_wall",
+    "path":"sprites/spr_wall/spr_wall.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
